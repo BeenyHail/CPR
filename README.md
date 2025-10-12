@@ -1,1 +1,1 @@
-# CPR(Corrupted PDF Recovery Algorithm for Digital Forensic)
+# CPR(Corrupted PDF Recovery Algorithm)
