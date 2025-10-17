@@ -7,14 +7,25 @@ def query_ollama(expression: str) -> str:
 
     prompt = f"""
 The following text is the result of CID-to-Unicode mapping.
-Please check if it is a natural, grammatically valid, and commonly used word or sentence in any major language (Korean, English, French, Chinese, etc.).
+Please check if it is a natural, grammatically valid, and commonly used word or sentence in any major language (English, French, Chinese, Hindi, Arabic, Korean, etc.).
 
 - If it is a real word or phrase that is commonly used in daily communication or formal writing, reply with "O"
 - If it is unnatural, meaningless, overly symbolic, or a random combination of special characters or archaic letters, reply with "X"
 - Do not explain your answer — only reply with O or X
 
-Examples of acceptable expressions: "추적추적", "있거니와", "however", "donc", "因此", "par conséquent", "worn shoes, still in his threa"
-Examples of invalid expressions: "ᾔḊ", "⨊⧺", "𓀀😁صҖ", "⚛⌘∃ç", "ǂǁ"
+Examples of acceptable expressions:
+"추적추적", "있거니와", "그러니까", "그럼에도 불구하고",
+"however", "therefore", "in conclusion", "worn shoes, still in his threadbare coat",
+"donc", "par conséquent", "je vous remercie",
+"因此", "所以说", "我们发现",
+"धन्यवाद", "यह सच है", "केलिएआिर्शहै।",
+"مرحبا", "الحمد لله", "ةمدخ  ليصوتلا  يهطلاو  تارئاطلاب  نودب  رايط"
+"ありがとう", "そして", "静かな夜に"
+
+Examples of invalid expressions:
+"ᾔḊ", "⨊⧺", "𓀀😁صҖ", "⚛⌘∃ç", "ǂǁ",
+"〄〓∰⊙♆", "¤†‰Ω", "₪𐌰𐍂𐌰", "∆₩∯", "√≠çπ∮",
+"𐍃𐍄𐌰𐌹", "ß∂˚∆ø", "»¬÷×±"
 
 Expression: {expression}
 """
