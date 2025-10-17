@@ -12,5 +12,6 @@ PyMuPDF==1.25.3
 pyparsing==3.2.1
 python-dateutil==2.9.0.post0
 pytz==2025.1
+requests==2.32.4
 six==1.17.0
 tzdata==2025.1
