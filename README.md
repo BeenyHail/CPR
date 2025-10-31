@@ -53,9 +53,23 @@
 	|Content*|completely unreadable (only Content Object remains)| 
 
 ## 🚀 Installation
-
 ```bash
-git clone <https://github.com/BeenyHail/CPR>
+#if you don't have git, this should be done first.
+#download&install git -> https://git-scm.com/install/
+winget install --id Git.Git -e --source winget
+```
+(1) If you only want the code
+```bash
+git clone --no-checkout https://github.com/BeenyHail/CPR.git
+cd CPR
+git sparse-checkout init --cone
+git sparse-checkout set Code
+git checkout main
+pip install -r requirements.txt
+```
+(2) If you want the code & full dataset(original pdf files 132 + corrupted files 655)
+```bash
+git clone https://github.com/BeenyHail/CPR
 cd CPR
 pip install -r requirements.txt
 ```
@@ -105,6 +119,7 @@ Do you want to attempt FontCMap&FontDB-based recovery? (yes/no):
 ## 📝 Requirements
 
 Python 3.X
+(recommend 3.12.x)
 
 
 ## License
@@ -114,5 +129,3 @@ Python 3.X
 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC" height="16">
 <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY" height="16">
 <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NC" height="16">
-
-
